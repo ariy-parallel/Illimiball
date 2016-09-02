@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
 public class GravityController : MonoBehaviour
@@ -10,6 +11,7 @@ public class GravityController : MonoBehaviour
 	void Update ()
 	{
 		var vector = Application.isEditor ? createEditorVector () : createActualVector ();
+//        var vector = createActualVector ();
 		Physics.gravity = Gravity * vector.normalized * gravityScale;
 	}
 
